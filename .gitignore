@@ -2,12 +2,13 @@
 
 # dependencies
 node_modules/
+.pnp
+.pnp.js
 
 # Expo
 .expo/
 dist/
 web-build/
-expo-env.d.ts
 
 # Native
 *.orig.*
@@ -31,8 +32,37 @@ yarn-error.*
 
 # local env files
 .env*.local
+.env.development.local
+.env.test.local
+.env.production.local
 
 # typescript
 *.tsbuildinfo
 
 app-example
+
+# Production
+build/
+out/
+
+# Editor directories and files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# macOS
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# Electron
+.webpack/
+.electron-builder/
+
+# Cursor
+.cursorignore
+
+# Docs
+docs/

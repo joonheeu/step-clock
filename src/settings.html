@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>StepClock 설정</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+    <div class="container settings-container">
+        <div class="settings-header">
+            <button id="backBtn" class="icon-btn">
+                <i data-lucide="arrow-left"></i>
+            </button>
+            <h1>설정</h1>
+        </div>
+        
+        <div class="settings-section">
+            <h2>타이머 설정</h2>
+            <div class="setting-item">
+                <label>
+                    <input type="checkbox" id="loopEnabled">
+                    타이머 순환 실행
+                </label>
+                <span class="setting-description">모든 타이머가 완료되면 처음부터 다시 시작</span>
+            </div>
+            
+            <div class="setting-item">
+                <label>
+                    <input type="checkbox" id="soundEnabled">
+                    소리 알림
+                </label>
+            </div>
+            
+            <div class="setting-item">
+                <label>
+                    <input type="checkbox" id="desktopEnabled">
+                    데스크톱 알림
+                </label>
+            </div>
+        </div>
+        
+        <div class="settings-section">
+            <h2>창 크기 설정</h2>
+            <div class="setting-item">
+                <label>현재 크기</label>
+                <div class="size-display">
+                    <span id="currentWidth">300</span> x <span id="currentHeight">450</span>
+                </div>
+            </div>
+            
+            <div class="setting-item">
+                <label>최소 크기</label>
+                <div class="size-inputs">
+                    <input type="number" id="minWidth" min="200" max="400" step="10">
+                    x
+                    <input type="number" id="minHeight" min="300" max="600" step="10">
+                </div>
+            </div>
+            
+            <div class="setting-item">
+                <label>최대 크기</label>
+                <div class="size-inputs">
+                    <input type="number" id="maxWidth" min="300" max="800" step="10">
+                    x
+                    <input type="number" id="maxHeight" min="400" max="1000" step="10">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script type="module" src="settings.js"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+</html> 
