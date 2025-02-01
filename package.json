@@ -1,6 +1,6 @@
 {
   "name": "step-clock-macos",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "electron/main.js",
   "scripts": {
     "start": "NODE_ENV=development electron .",
@@ -13,7 +13,14 @@
     "mac": {
       "category": "public.app-category.productivity",
       "icon": "assets/icon.icns",
-      "target": ["dmg", "zip"]
+      "target": ["dmg", "zip"],
+      "hardenedRuntime": true,
+      "gatekeeperAssess": false,
+      "entitlements": "build/entitlements.mac.plist",
+      "entitlementsInherit": "build/entitlements.mac.plist"
+    },
+    "dmg": {
+      "sign": false
     },
     "files": [
       "electron/**/*",
